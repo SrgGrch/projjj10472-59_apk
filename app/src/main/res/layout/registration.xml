@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/EntryScreen"
+    android:layout_width="370dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/registration_nickname_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Введите никнейм"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:id="@+id/registration_password_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Введите пароль"
+        android:textColor="@color/white"
+        android:inputType="textPassword"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <com.example.myapplication.CustomViews.CustomButton
+            style="@style/Theme.CustomButton"
+            android:id="@+id/button_back"
+            android:onClick="back_fragment"
+            app:bgColor="@color/material.red"
+            android:text="Назад" />
+        <com.example.myapplication.CustomViews.CustomButton
+            style="@style/Theme.CustomButton"
+            android:id="@+id/button_openMainMenu"
+            android:onClick="registration"
+            app:bgColor="@color/material.green"
+            android:text="Создать аккаунт" />
+    </LinearLayout>
+</LinearLayout>

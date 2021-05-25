@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="main_view" type="id" />
+    <item name="game_interface" type="id" />
+    <item name="inventory_view" type="id" />
+    <item name="build_radius_circle" type="id" />
+</resources>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A1373737"
+    android:onClick="preventClick">
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <View
+            android:id="@+id/close_inventory_button"
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:layout_marginStart="470dp"
+            android:background="@drawable/close"/>
+
+        <LinearLayout
+            android:id="@+id/main_inventory_buttons"
+            android:layout_width="265dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="225dp"
+            android:layout_height="63dp"
+            android:layout_marginStart="275dp"
+            android:layout_marginTop="30dp"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:alpha="0.7"
+            android:textAlignment="center"
+            android:gravity="center"/>
+
+        <ScrollView
+            android:layout_width="225dp"
+            android:layout_height="158dp"
+            android:layout_marginStart="275dp"
+            android:layout_marginTop="93dp">
+            <TextView
+                android:id="@+id/item_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:alpha="0.7"
+                android:textColor="@color/white"
+                android:textSize="14dp"/>
+        </ScrollView>
+
+        <GridLayout
+            android:layout_width="265dp"
+            android:layout_height="158dp"
+            android:layout_marginTop="95dp"
+            android:id="@+id/secondary_inventory_buttons"
+            android:orientation="horizontal"
+            android:rowCount="3"
+            android:columnCount="5"
+            android:useDefaultMargins="true"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="7dp"
+            android:src="@drawable/delete"
+            android:layout_marginTop="253dp"
+            android:layout_marginStart="213.5dp"
+            android:alpha="0.7"/>
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/inventory_craft_button"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:padding="0dp"
+        android:alpha="0.7"
+        android:rotation="270"
+        android:layout_gravity="right|center"
+        android:layout_marginEnd="-24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:textAlignment="center"
+            android:text="Крафт"
+            android:textSize="18dp"
+            android:textColor="@color/white"/>
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="2dp"
+            android:background="@color/white"
+            android:rotation="13"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="33dp" />
+        <View
+            android:layout_width="50dp"
+            android:layout_height="2dp"
+            android:background="@color/white"
+            android:rotation="-13"
+            android:layout_gravity="end"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="33dp" />
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_gravity="start"
+            android:layout_marginTop="8dp"/>
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_gravity="end"
+            android:layout_marginTop="8dp"/>
+    </FrameLayout>
+</FrameLayout>
