@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="preventClick">
+    <com.example.myapplication.CustomViews.CustomButton
+        style="@style/Theme.CustomButton"
+        android:layout_gravity="end"
+        android:id="@+id/button_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Выйти"
+        android:onClick="logout"
+        app:bgColor="@color/material.red" />
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.example.myapplication.CustomViews.CustomButton
+            android:id="@+id/button_enter_game"
+            style="@style/Theme.CustomButton"
+            android:onClick="join_room"
+            android:text="Играть"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:backgroundTint="@color/material.green"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <com.example.myapplication.CustomViews.CustomButton
+                android:text="Профиль"
+                style="@style/Theme.CustomButton"
+                android:id="@+id/button_profile"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:onClick="profile"/>
+            <com.example.myapplication.CustomViews.CustomButton
+                style="@style/Theme.CustomButton"
+                android:id="@+id/button_leaders"
+                android:text="Топ игроков"
+                android:onClick="leaders_table"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

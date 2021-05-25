@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="400dp"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="end"
+    android:onClick="preventClick"
+    android:id="@+id/inventory_craft">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="30dp"
+        android:gravity="center"
+        android:alpha="0.85"
+        android:background="#545454" >
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_gravity="start"/>
+        <ScrollView
+            android:layout_marginStart="25dp"
+            android:scrollbars="none"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/scroll_view_">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/_items"
+                android:orientation="vertical"/>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="40dp">
+            <TextView
+                android:id="@+id/craft_item_name"
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:textAlignment="center"/>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="158dp">
+                <TextView
+                    android:id="@+id/craft_item_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"/>
+            </ScrollView>
+            <LinearLayout
+                android:id="@+id/craft_items_container"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Требуется:" />
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp">
+                    <LinearLayout
+                        android:id="@+id/craft_items"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal" />
+                </HorizontalScrollView>
+            </LinearLayout>
+            <com.example.myapplication.CustomViews.CustomButton
+                style="@style/Theme.CustomButton"
+                app:bgColor="@color/material.green"
+                android:id="@+id/make_craft_button"
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:enabled="false"
+                android:text="Создать"
+                android:layout_gravity="right" />
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

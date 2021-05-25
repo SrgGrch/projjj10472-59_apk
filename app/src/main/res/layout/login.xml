@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/EntryScreen"
+    android:layout_width="400dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/login_nickname_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Введите никнейм"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:id="@+id/login_password_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Введите пароль"
+        android:textColor="@color/white"
+        android:inputType="textPassword"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <com.example.myapplication.CustomViews.CustomButton
+            style="@style/Theme.CustomButton"
+            android:id="@+id/button_back"
+            android:backgroundTint="@color/material.red"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Назад" />
+        <com.example.myapplication.CustomViews.CustomButton
+            style="@style/Theme.CustomButton"
+            android:id="@+id/button_openMainMenu"
+            android:onClick="login"
+            android:backgroundTint="@color/material.green"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Войти" />
+    </LinearLayout>
+</LinearLayout>
