@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <Button
+        android:id="@+id/button_build"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/sword"
+        android:layout_gravity="right|bottom"
+        android:alpha="0.55"
+        android:layout_margin="20dp"/>
+    <com.example.myapplication.CustomViews.BuildModeEnableButton
+        android:id="@+id/close_build_mode"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="120dp"
+        android:alpha="0.6" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="25dp"
+        android:id="@+id/items_to_build"
+        android:orientation="vertical" />
+</FrameLayout>
